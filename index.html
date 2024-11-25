@@ -4,34 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>TURPIN Benjamin - Portfolio</title>
 </head>
 <body>
-    <nav>
-        <ul class="nav-links">
-            <li class="link"><a href="index.html">Accueil</a></li>
-            <li class="link"><a href="#">Projets</a></li>
-            <li class="link"><a href="#">Contact</a></li>
-            <li class="link"><a href="cv.html">CV</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li class="link"><a href="index.html">Accueil</a></li>
 
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4>DEVELOPPEUR FULLSTACK</h4>
+                <li class="link"><a href="#">Projets</a>
+                    <div class="submenu">
+                        <div><a href="./trains.html">
+                            Trains!</a></div>
+                        <div><a href="./e_commerce.html">
+                            E-Commerce</a></div>
+                        <div><a href="./ctfc.html">
+                            CTF - C</a></div>
+                    </div>
+                </li>
+                <li class="link"><a href="#">Contact</a></li>
+                <li class="link"><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+
+        <div class="presentation">
             <h1>Salut, je suis <span>Benjamin TURPIN</span>, developpeur FullStack</h1>
             <p>
-                en 2ème année de formation en BUT Informatique à l'IUT Montpellier-Sète.
+                Je suis un développeur en formation avec une grande capacité d'adaptation aux nouvelles technologies.
+                Mon parcours en BUT Informatique me permet de renforcer mes compétences en développement full stack, tout en participant à des projets concrets et stimulants.
+                Ambitieux, je vise à poursuivre en école d'ingénieur pour approfondir mes compétences techniques et contribuer à des solutions innovantes qui répondent aux besoins du monde numérique actuel.
             </p>
+            <br>
             <p>
                 Ce portfolio est encore en cours de construction, cependant vous pouvez consulter mon profil github
                 <a href="https://github.com/BNJRL">Benjamin Turpin</a>
             </p>
         </div>
     </header>
+
+    <main>
+        <div class="projets">
+            <h2>Projets ?</h2>
+            <ul class="projets-liste">
+                <li>
+                    <h4>Trains!</h4>
+                    <p>Frontend -> JavaFX</p>
+                    <p>Backend -> Java</p>
+                </li>
+                <li>
+                    <h4>Site e-commerce</h4>
+                    <p>Frontend -> Html/css</p>
+                    <p>Backend -> PHP, utilisation SOLID et MVC, MySQL et PL/SQL</p>
+                </li>
+                <li>
+                    <h4>CTF - Gcc</h4>
+                    <p>Frontend -> html/css</p>
+                    <p>Backend -> PHP, Docker</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://github.com/BNJRL">©2024 TURPIN Benjamin, TOUS DROITS RÉSERVÉS</a>
+    </footer>
 
 
     <script src="script.js"></script>

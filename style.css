@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2.familu=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/** Global */
+
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     outline: none;
     border:none;
     box-sizing: border-box;
@@ -9,6 +12,7 @@
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 body{
@@ -16,28 +20,35 @@ body{
     background-color: #363636;
 }
 
+/** Réalisation de la barre de navigation */
+
 nav{
-    max-width: 1200px;
-    margin:auto;
+    display: flex;
+    flex-direction: column;
     padding: 2rem 1rem;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:2rem;
 }
 .nav-links{
+    margin : auto;
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 3rem;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 2rem;
 }
 
-.link a{
+.link{
+    position: relative;
+}
+
+.link > a{
     position: relative;
     padding-bottom: 0.75rem;
+
     color:#fff;
+    font-size: 1.5rem;
 }
-.link a::after{
+.link > a::after{
     content: "";
     position: absolute;
     height: 2px;
@@ -48,48 +59,98 @@ nav{
     transition: all 0.3s ease;
 }
 
-.link a:hover::after{
+.link > a:hover::after{
     width: 70%;
 }
 
-.btn{
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color:#fff;
-    background-color: #1d4ed8;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover{
-    background-color: #1e40af;
-}
-
-
-.container{
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 2rem;
-}
-.blur{
+.submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
-    z-index: -100;
+    background-color: #555555;
+    width: 120px;
+    padding: 10px;
+    top: -6px;
+    right: -25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
 }
 
-header{
+li:hover > .submenu {
+    top: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu a{
+    color: white;
+    transition: color 0.2s ease;
+}
+.submenu a:hover{
+    color: #376bf6;
+}
+.submenu a:hover:before{
+    content :">";
+    position: absolute;
+    left:1px;
+}
+
+
+/** Présentation Générale */
+
+main{
     position: relative;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
 }
 
-header .content h4{
+main .projets h4{
     margin-bottom: 1rem;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
+}
+
+
+/** Projets cartes*/
+
+.projets{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul.projets-liste{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+ul.projets-liste li{
+    list-style: none;
+    background-color: rgba(106,199,255,0.43);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+/** FOOTER */
+
+footer{
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+footer a{
+    transition : color, 0.2s ease;
+}
+footer:hover a{
+    color: #4849e4;
 }
